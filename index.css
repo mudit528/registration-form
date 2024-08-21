@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    
+    
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("images/c.jpg");
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+#title {
+    position: relative;
+    margin-bottom: 5px;
+    color: #e360b7;
+    font-size: 35px;
+    font-weight: bold;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+#title::before,
+#title::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #e360b7;
+    border-radius: 50%;
+}
+
+#message {
+    font-size: medium;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    border: 1px solid black;
+    padding: 40px 30px;
+    border-radius: 10px;
+}
+
+.flex {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+}
+
+input {
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 15px;
+    outline: none;
+    background: #393939;
+    color: black;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.inputBox {
+    position: relative;
+}
+
+.inputBox span {
+    position: absolute;
+    padding: 12px;
+    left: 0;
+    pointer-events: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.inputBox input:focus,
+.inputBox input:valid {
+    background: white;
+    border: 1px solid #e360b7;
+}
+
+
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span {
+    transform: translateX(10px) translateY(-5px);
+    font-size: 0.65em;
+    color: white;
+    background-color: #e360b7;
+    border: 1px solid #e360b7;
+    border-radius: 6px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+#final {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#reg-btn {
+    color: white;
+    font-size: medium;
+    border-radius: 6px;
+    background-color: #e360b7;
+    border: none;
+    transition: 0.3s;
+}
+
+#reg-btn:hover {
+    background-color: #b55193;
+}
